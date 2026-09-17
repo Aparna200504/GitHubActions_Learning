@@ -1,0 +1,11 @@
+name: Deploy
+
+on: 
+  workflow_call: # whenever this workflow needs to be called from another
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy the code
+        run: echo "Deploy on Server (ex AWS)"
