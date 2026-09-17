@@ -11,10 +11,10 @@ jobs:
     needs: code
     uses: ./.github/workflows/build.yml
 
-  tests:
+  test:
     needs: build
     uses: ./.github/workflows/tests.yml
 
   deploy:
-    needs: tests
+    needs: test
     uses: ./.github/workflows/deploy.yml
