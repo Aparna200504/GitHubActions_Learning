@@ -1,22 +1,18 @@
-#name of workflow
+# Name of the workflow
 name: Code
 
-#when should run
+# when the workflow should run
 on: 
-  push:
+  workflow_call:
 
-#jobs of workflow
+# jobs in the workflow
 jobs:
   code-checkout:
     runs-on: ubuntu-latest
-
-
-    #steps for workflow
+    # steps in the workflow
     steps:
-
-    #define actions and the steps
       - name: Clone the code
         uses: actions/checkout@v7
 
       - name: Print the message
-        run: echo "Code Clone"
+        run: echo "Code Cloned"
